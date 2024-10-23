@@ -51,8 +51,9 @@ export function aufgabe02(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    result.push(currentElement)
-    result.push(currentElement)
+
+    const currentUpperCaseLetter = currentElement.toUpperCase()
+    result.push(currentUpperCaseLetter)
   }
 
   return result.join("")
