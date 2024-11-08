@@ -65,13 +65,23 @@ export function aufgabe03(args) {
   const input = args
   const result = []
 
+  // Erstelle eine Variable um alle e's zu zaehlen
+  let eCount = 0
+
   for (let i = 0; i < input.length; i++) {
+    //zaehle alle e's in einem Text
     const currentElement = input[i]
+    // Finde ein e
     if (currentElement === "e") {
+      // Zaehle ein e
+      eCount++
+    } else if (currentElement === "E") {
+      // Zaehle auch ein E
+      eCount++
     }
   }
-
-  return result.joint("")
+  // Gebe die Anzahl der e's wieder
+  return eCount
 }
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
@@ -97,3 +107,83 @@ export function aufgabe12(args) {
   return firstE
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
+
+export function aufgabe04(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um alle Wörter in einem Text zu zaehlen
+  let wordCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein Leerzeichen
+    if (currentElement === " ") {
+      // Zaehle ein Wort
+      wordCount++
+    }
+  }
+  // Gebe die Anzahl der Wörter wieder
+  return wordCount + 1
+}
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
+export function aufgabe05(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um die Anzahl der Grossbuchstaben zu zaehlen
+  let capitalLettercount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    //Finde ein Leerzeichen oder ein Punkt
+    if (currentElement === " " || currentElement === ".") {
+      //ignoriere das Leerzeichen oder das Punkt
+    } else if (currentElement === currentElement.toUpperCase()) {
+      // Zaehle ein Grossbuchstabe
+      capitalLettercount++
+    }
+  }
+
+  //Wenn die Anzahl Grossbuchstaben grösser als 0 ist, gebe wahr zurück
+  if (capitalLettercount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um alle Sonderzeichen zu zaehlen
+  let specialCharacterCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein Sonderzeichen
+    if (
+      currentElement === " " ||
+      currentElement === "." ||
+      currentElement === "," ||
+      currentElement === "!" ||
+      currentElement === "?" ||
+      currentElement === ":"
+    ) {
+      // Zaehle ein Sonderzeichen
+      specialCharacterCount++
+    }
+  }
+  // Wenn die Anzahl Sonderzeichen ≠ 0 ist, gebe wahr zurück
+  if (specialCharacterCount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
