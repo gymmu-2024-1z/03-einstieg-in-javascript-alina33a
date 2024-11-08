@@ -187,3 +187,49 @@ export function aufgabe06(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable die testet ob in einem Text die Wörter 'und' vorkommt
+  let wordCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde das Wort 'und'
+    if (
+      currentElement === "u" &&
+      input[i + 1] === "n" &&
+      input[i + 2] === "d"
+    ) {
+      // Zaehle das Wort 'und'
+      wordCount++
+    }
+  }
+  // Wenn das Wort 'und' vorkommt, gebe wahr zurück
+  if (wordCount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um alle e's  mit einer 3 zu ersetzen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      result.push("3")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
