@@ -233,3 +233,16 @@ export function aufgabe08(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe09(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um zu testen ob eine Eingabe genau 6 Elemente hat
+  if (input.length === 6) {
+    return true
+  } else {
+    return false
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
