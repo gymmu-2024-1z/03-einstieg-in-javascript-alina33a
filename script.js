@@ -324,3 +324,73 @@ export function aufgabe19(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um zu testen ob nach jedem . ein Leerzeichen kommt
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      // Erkenne ob als nächstes ein Leerzeichen kommt
+      if (input[i + 1] !== " ") {
+        // Wenn nicht gebe falsch zurueck
+        return false
+      }
+    }
+  }
+  return true
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe21(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um die Eingabe umzukehren
+  for (let i = input.length - 1; i >= 0; i--) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
+
+export function aufgabe22(args) {
+  const input = args
+  const result = []
+  let switchFirst = true
+
+  // Erstelle eine Variable um alle Zeichen mit einem _ zu ersetzen, bis das Zeichen k kommt, dann aufhören
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "k") {
+      switchFirst = false
+    }
+    if (switchFirst === true) {
+      result.push("_")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe16(args) {
+  const input = args
+  const result = []
+  switchFirst = true
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    // Erstelle eine Variable um die Eingabe nur bis zum ersten $ als ersten Teil einer Liste zu speichern
+    if (currentElement === "$") {
+      switchFirst = false
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
