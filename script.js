@@ -379,18 +379,26 @@ export function aufgabe22(args) {
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
 
 export function aufgabe16(args) {
-  const input = args
-  const result = []
-  switchFirst = true
+  const text = args
+  let switchFirst = true
+  const listFirst = []
+  const listSecond = []
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
     // Erstelle eine Variable um die Eingabe nur bis zum ersten $ als ersten Teil einer Liste zu speichern
+   for (let i = 0; i < text.length; i++) {
+    const currentElement = text[i]
     if (currentElement === "$") {
-      switchFirst = false
+      switchFirst = !switchFirst
+    }else if (switchFirst) {
+      listFirst.push(currentElement)
+    }
+    else {
+      listSecond.push(currentElement)
     }
   }
-  return result.join("")
+  return [listFirst.join(""), listSecond.join("")]
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
