@@ -384,21 +384,34 @@ export function aufgabe16(args) {
   const listFirst = []
   const listSecond = []
 
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
-    // Erstelle eine Variable um die Eingabe nur bis zum ersten $ als ersten Teil einer Liste zu speichern
-   for (let i = 0; i < text.length; i++) {
+  // Erstelle eine Variable um die Eingabe nur bis zum ersten $ als ersten Teil einer Liste zu speichern
+  for (let i = 0; i < text.length; i++) {
     const currentElement = text[i]
     if (currentElement === "$") {
       switchFirst = !switchFirst
-    }else if (switchFirst) {
+    } else if (switchFirst) {
       listFirst.push(currentElement)
-    }
-    else {
+    } else {
       listSecond.push(currentElement)
     }
   }
   return [listFirst.join(""), listSecond.join("")]
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
+export function eigeneaufgabe01(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um alle n's  mit einer % zu ersetzen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "n") {
+      result.push("%")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=eigeneAufgabe01]", eigeneaufgabe01)
