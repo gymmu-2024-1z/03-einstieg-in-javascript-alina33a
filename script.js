@@ -415,3 +415,51 @@ export function eigeneaufgabe01(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=eigeneAufgabe01]", eigeneaufgabe01)
+
+export function eigeneaufgabe02(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    const code = currentElement.charCodeAt(0)
+    const letter = String.fromCharCode(code + 4)
+    result.push(letter)
+  }
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=eigeneAufgabe02]", eigeneaufgabe02)
+
+export function eigeneaufgabe03(args) {
+  const input = args
+  const result = []
+  //Erstelle eine Variable um jede Kommazahl in einer Eingabe zu ersetzen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ",") {
+      result.push(".")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=eigeneAufgabe03]", eigeneaufgabe03)
+
+const text = "Bitte sortiere mich!"
+const list = text.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+for (let i = 0; i < list.length - 1; i++) {
+  const currentElement = list[i]
+  const nextElement = list[i + 1]
+  if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+    const tmp = list[i + 1]
+    list[i + 1] = list[i]
+    list[i] = tmp
+    i = -1 // starte von vorne wenn etwas vertauscht wurde.
+  }
+}
+const result = list.join("")
+return result

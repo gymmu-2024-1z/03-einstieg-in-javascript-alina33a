@@ -156,3 +156,10 @@ Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
 Ersetze alle `n`s mit einem `%`.
 
 ## Eigene Aufgabe 02
+
+Text in ASCII umwandeln, 4 dazu addieren und zurück in einen Buchstaben
+verwandeln.
+
+## Eigene Aufgabe 03
+
+Erkenne alle Kommazahlen in einem Text und ersetze sie als ein Punkt.
