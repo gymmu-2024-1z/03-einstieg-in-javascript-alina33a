@@ -466,3 +466,5 @@ export function bubbleSort(args) {
   return result
 }
 linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
+
+export function aufgabe17(args) {}
