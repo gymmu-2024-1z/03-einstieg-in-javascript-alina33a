@@ -491,3 +491,26 @@ export function aufgabe17(args) {
   return totalList
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+
+export function countingSort(args) {
+  const input = args
+  const lookup = new Array(256).fill(0)
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    lookup[ascii] = lookup[ascii] + 1
+  }
+
+  const result = []
+  for (let i = 0; i < lookup.length; i++) {
+    const value = lookup[i]
+    for (let j = 0; j < value; j++) {
+      const charakter = String.fromCharCode(i)
+      result.push(charakter)
+    }
+  }
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=countingSort]", countingSort)
