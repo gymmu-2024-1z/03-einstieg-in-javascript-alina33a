@@ -47,7 +47,7 @@ linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
 
 export function aufgabe02(args) {
   const input = args
-  const result = []
+  const result = [] // Erstellt eine leere Liste
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -56,7 +56,7 @@ export function aufgabe02(args) {
     result.push(currentUpperCaseLetter)
   }
 
-  return result.join("")
+  return result.join("") // Gibt das Resultat zurück ohne Abständen
 }
 
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
@@ -66,7 +66,7 @@ export function aufgabe03(args) {
   const result = []
 
   // Erstelle eine Variable um alle e's zu zaehlen
-  let eCount = 0
+  let eCount = 0 // die Anzahl der e's
 
   for (let i = 0; i < input.length; i++) {
     //zaehle alle e's in einem Text
@@ -90,7 +90,7 @@ export function aufgabe12(args) {
   const result = []
 
   // Erstelle eine Variable und die Position des ersten e's zu speichern
-  let firstE = -1
+  let firstE = -1 // Position des ersten e
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -113,7 +113,7 @@ export function aufgabe04(args) {
   const result = []
 
   // Erstelle eine Variable um alle Wörter in einem Text zu zaehlen
-  let wordCount = 0
+  let wordCount = 0 // Ist die Anzahl der Wörter
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -124,7 +124,7 @@ export function aufgabe04(args) {
     }
   }
   // Gebe die Anzahl der Wörter wieder
-  return wordCount + 1
+  return wordCount + 1 // Was es zurück gibt
 }
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
@@ -133,10 +133,10 @@ export function aufgabe05(args) {
   const result = []
 
   // Erstelle eine Variable um die Anzahl der Grossbuchstaben zu zaehlen
-  let capitalLettercount = 0
+  let capitalLettercount = 0 // Das ist die Anzahl der Grossbuchstaben
 
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+    const currentElement = input[i] // Das was man grad erkennt, das aktuelle Zeichen
 
     //Finde ein Leerzeichen oder ein Punkt
     if (currentElement === " " || currentElement === ".") {
@@ -161,7 +161,7 @@ export function aufgabe06(args) {
   const result = []
 
   // Erstelle eine Variable um alle Sonderzeichen zu zaehlen
-  let specialCharacterCount = 0
+  let specialCharacterCount = 0 // Die Anzahl der Sonderzeichen
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -277,14 +277,14 @@ export function aufgabe14(args) {
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 
 export function aufgabe15(args) {
-  const input = args
+  const input = args // ist die Eingabe
   const result = []
 
   // Erstelle eine Variable um die Eingabe nur bis zum ersten Leerzeichen zu lesen
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement !== " ") {
-      result.push(currentElement)
+      result.push(currentElement) // bedeutet das wir das Zeihcen was wir gerade haben in die result Liste schreiben
     } else {
       break
     }
@@ -323,7 +323,7 @@ export function aufgabe19(args) {
   }
   return result.join("")
 }
-linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19) // ist die Eingabe und endet somit die Aufgabe
 
 export function aufgabe20(args) {
   const input = args
@@ -340,7 +340,7 @@ export function aufgabe20(args) {
       }
     }
   }
-  return true
+  return true // bedeutet das es wahr zurück gibt
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
@@ -360,7 +360,7 @@ linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
 export function aufgabe22(args) {
   const input = args
   const result = []
-  let switchFirst = true
+  let switchFirst = true // ist eine Variable die sagt ob wir die erste Zeichen mit einem _ ersetzen sollen
 
   // Erstelle eine Variable um alle Zeichen mit einem _ zu ersetzen, bis das Zeichen k kommt, dann aufhören
   for (let i = 0; i < input.length; i++) {
@@ -382,7 +382,7 @@ export function aufgabe16(args) {
   const text = args
   let switchFirst = true
   const listFirst = []
-  const listSecond = []
+  const listSecond = [] // bedeutet dass wir eine leere Liste erstellen (zweite)
 
   // Erstelle eine Variable um die Eingabe nur bis zum ersten $ als ersten Teil einer Liste zu speichern
   for (let i = 0; i < text.length; i++) {
