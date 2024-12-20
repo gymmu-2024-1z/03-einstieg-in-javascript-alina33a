@@ -22,12 +22,97 @@
 
       <div class="button-container">
         <!-- TODO: Hier neue Buttons erstellen. -->
+        <button type="button" data-click="selectionSort">selectionSort</button>
+        <button type="button" data-click="countingSort">countingSort</button>
+        <button type="button" data-click="aufgabe17">Aufgabe 17</button>
+        <button type="button" data-click="bubbleSort">bubble Sort</button>
+        <button type="button" data-click="eigeneAufgabe03">
+          eigeneAufgabe03
+        </button>
+        <button type="button" data-click="eigeneAufgabe02">
+          eigeneAufgabe02
+        </button>
+        <button type="button" data-click="eigeneAufgabe01">
+          eigeneAufgabe01
+        </button>
+        <button type="button" data-click="aufgabe22">Aufgabe 22</button>
+        <button type="button" data-click="aufgabe21">Aufgabe 21</button>
+        <button type="button" data-click="aufgabe20">Aufgabe 20</button>
+        <button type="button" data-click="aufgabe19">Aufgabe 19</button>
+        <button type="button" data-click="aufgabe18">Aufgabe 18</button>
+        <button type="button" data-click="aufgabe17">Aufgabe 17</button>
+        <button type="button" data-click="aufgabe16">Aufgabe 16</button>
+        <button type="button" data-click="aufgabe15">Aufgabe 15</button>
+        <button type="button" data-click="aufgabe14">Aufgabe 14</button>
+        <button type="button" data-click="aufgabe13">Aufgabe 13</button>
+        <button type="button" data-click="aufgabe09">Aufgabe 9</button>
+        <button type="button" data-click="aufgabe08">Aufgabe 8</button>
+        <button type="button" data-click="aufgabe07">Aufgabe 7</button>
+        <button type="button" data-click="aufgabe06">Aufgabe 6</button>
+        <button type="button" data-click="aufgabe05">Aufgabe 5</button>
+        <button type="button" data-click="aufgabe04">Aufgabe 4</button>
+        <button type="button" data-click="aufgabe12">Aufgabe 12</button>
+        <button type="button" data-click="aufgabe03">Aufgabe 3</button>
+        <button type="button" data-click="aufgabe02">Aufgabe 2</button>
         <button type="button" data-click="aufgabe01">Aufgabe 1</button>
       </div>
 
       <section>
         <h2>Sortierverfahren</h2>
         <!-- TODO: Schreiben Sie hier zu Sortierverfahren-->
+        <h3>bubbleSort</h3>
+        <p>
+          Beim bubbleSort sortiert man die Elemente und setzt sie in die
+          richtige Reihenfolge ein. Man vergleicht immer zwei Nachbarelemente.
+          Diese Werte werden immer in einer Array oder Liste überprüft. Sie
+          arbeitet auch in-place, was bedeutet dass es keinen zusatzlichen
+          Speicherplatz braucht.
+        </p>
+        <h3>countingSort</h3>
+        <p>
+          Counting Sort ist ein Sortieralgorithmus, der besonders gut für ganze
+          Zahlen funktioniert, die in einem begrenzten Bereich liegen. Er zählt,
+          wie oft jede Zahl in der Eingabemenge vorkommt, und verwendet diese
+          Zählungen, um die Elemente in der richtigen Reihenfolge anzuordnen.
+        </p>
+        <h3>SelectionSort</h3>
+        <p>
+          Es ist ein einfaches Algorithmus, der in-place arbeitet. Die
+          sortierenden Daten befinden sich in ein Array, den man im Geiste in
+          zwei Teile teilt. Die erste Teile sind die Elemente, die bereits
+          sortiert sind. Die zweite Teile sind die Elemente, die noch sortiert
+          werden sollen. Um die Liste vom kleinsten bis zum grössten sortieren
+          möchte, muss man aus der Liste die kleinste Zahl herausnehmen und an
+          die erste Position der sortierten Liste setzen.
+        </p>
+        <h3>Vergleich</h3>
+        <p>
+          Selection Sort, Counting Sort und Bubble Sort sind drei verschiedene
+          Sortierverfahren, die sich in ihrer Funktionsweise und Effizienz
+          unterscheiden.
+        </p>
+        <p>
+          Selection Sort arbeitet, indem es in jedem Durchgang das kleinste
+          Element im unsortierten Teil der Liste findet und es mit dem ersten
+          unsortierten Element tauscht. Zudem benötigt Selection Sort keinen
+          zusätzlichen Speicherplatz, da es in-place arbeitet, aber es ist
+          unsicher, weil gleiche Elemente ihre Reihenfolge nicht unbedingt
+          beibehalten.
+        </p>
+        <p>
+          Counting Sort hingegen zählt, wie oft jedes Element vorkommt, und
+          verwendet diese Zählungen, um die Elemente in der richtigen
+          Reihenfolge anzuordnen. Es braucht jedoch mehr Speicherplatz, da ein
+          zusätzliches Array zur Zählung nötigist. Counting Sort ist sicher,
+          weil die gleiche Elemente ihre Reihenfolge beibehalten.
+        </p>
+        <p>
+          Bubble Sort funktioniert, indem es benachbarte Elemente vergleicht und
+          sie tauscht, wenn sie in der falschen Reihenfolge sind. Dieser Vorgang
+          wird wiederholt, bis die Liste vollständig sortiert ist. Gleich wie
+          Selection Sort arbeitet Bubble Sort in-place und benötigt keinen
+          zusätzlichen Speicherplatz, ist jedoch sicher.
+        </p>
       </section>
     </div>
 
